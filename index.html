@@ -1,51 +1,63 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" href="/src/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Be a Ba</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="app">
-      <main>
-        <div class="content">
-          <div id="streak" class="streak">
-            
-          </div>
-          <div class="list-squares">
-            <div id="first-letter" class="square">?</div>
-            <div id="second-letter" class="square">?</div>
-            <div id="third-letter" class="square">?</div>
-          </div>
-          <div>
-            <form id="form">
-              <input id="word" class="input" type="text" name="word" disabled />
-              <div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be a Ba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <main>
+      <div class="content">
+        <div>
+          <p class="streak-msg">
+            Streak: <span id="streak" class="streak">0</span>
+          </p>
+        </div>
+        <div class="list-squares">
+          <div id="first-letter" class="square">?</div>
+          <div id="second-letter" class="square">?</div>
+          <div id="third-letter" class="square">?</div>
+        </div>
+        <div>
+          <form id="form">
+            <input id="word" class="input" type="text" name="word" disabled />
+            <div>
+              <div class="errors">
                 <span id="error" class="error">
                   A palavra digitada não existe
                 </span>
+                <span id="repeated" class="repeated">
+                  A palavra já foi digitada
+                </span>
               </div>
-            </form>
-            <button id="new-game" class="btn">
-              Nova Partida
-            </button>
-          </div>
+            </div>
+          </form>
+          <button id="new-game" class="btn">
+            Nova Partida
+          </button>
         </div>
-        <div class="footer">
-          <p class="tip">
-            <span class="bold">Como jogar</span>: Dado as 3 letras no topo, 
-             digite no campo palavras que contenham as três letras; 
-             Digitando uma palavra existente no dicionário português que 
-             contenha as 3 letras, você ganha.
-          </p>
-        </div>
-      </main>
-    </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+      </div>
+      <div class="footer">
+        <p class="tip">
+          <span class="bold">Como jogar</span>: Dado as 3 letras no topo,
+          digite no campo palavras que contenham as três letras;
+          Digitando uma palavra existente no dicionário português que
+          contenha as 3 letras, você ganha.
+        </p>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
